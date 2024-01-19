@@ -4,5 +4,9 @@
 /catkin_ws/build/
 /catkin_ws/.catkin_workspace
 
+devel/
+build/
+.catkin_workspace
+
 #test file for ignore
 ignore-test.txt
