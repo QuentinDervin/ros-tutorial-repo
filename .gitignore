@@ -1,9 +1,5 @@
 #gitignore file
 
-/catkin_ws/devel/
-/catkin_ws/build/
-/catkin_ws/.catkin_workspace
-
 devel/
 build/
 .catkin_workspace
