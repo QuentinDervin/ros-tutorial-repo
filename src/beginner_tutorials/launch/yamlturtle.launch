@@ -1,0 +1,12 @@
+ <launch>
+ 
+   <group ns="turtlesim1">
+     <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+   </group>
+
+ 
+   <rosparam file="$(find beginner_tutorials)/config/turtlesim_params.yaml"/>
+
+
+
+ </launch>

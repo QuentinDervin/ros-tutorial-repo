@@ -1,0 +1,20 @@
+forward1:
+  forward: 1
+backward1:
+  backward: 1
+rotate1:
+  rotate: 1
+motion1:
+  forward: 1
+  rotate: 1
+  backward: 1
+square:
+  forward: 1
+  up: 1
+  backward: 1
+  down: 1
+motion2:
+  forward: 2
+  rotate: 7
+  backward: 2
+
