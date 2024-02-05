@@ -20,7 +20,7 @@ class Turtle1Action(object):
       
     def execute_cb(self, goal):
         #setting up the publisher variable
-        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+        pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10, latch=True)
 
         # helper variables
         r = rospy.Rate(1)
@@ -35,7 +35,7 @@ class Turtle1Action(object):
         dict_goal = goalString[7:-1]
         #finishes deserializing
         motion = eval(dict_goal)
-        print("Motion dictionary recieved:" + str(motion))
+        rospy.loginfo("Motion dictionary recieved:" + str(motion))
         
         
         # start executing the action
@@ -82,7 +82,6 @@ class Turtle1Action(object):
             else:
                 #tp to center?
                 rospy.loginfo("Unknown movement")
-                print("placeholder3")
 
             
 
