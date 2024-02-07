@@ -1,0 +1,18 @@
+rosdistro: 'noetic
+
+  '
+roslaunch:
+  uris:
+    host_quentin_thinkpad_x13__34927: http://quentin-ThinkPad-X13:34927/
+    host_quentin_thinkpad_x13__44033: http://quentin-ThinkPad-X13:44033/
+rosversion: '1.16.0
+
+  '
+run_id: 84b6a108-baac-11ee-97b7-bb552a142f37
+turtlesim1:
+  sim:
+    background_b: 0
+    background_g: 200
+    background_r: 100
+  
+

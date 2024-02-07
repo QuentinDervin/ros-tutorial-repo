@@ -6,9 +6,5 @@ build/
 
 .vscode/
 
-devel/
-build/
-.catkin_workspace
-
 #test file for ignore
 ignore-test.txt
