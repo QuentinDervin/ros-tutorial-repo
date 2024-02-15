@@ -8,7 +8,7 @@ import rospy
 import actionlib
 import yaml
 
-
+import os
 import sys
 
 
@@ -22,7 +22,10 @@ def turtle1_client(motion_call):
     client.wait_for_server()
 
     #reads the yaml file and gets the motions dictionary
-    with open('/home/quentin/ros-tutorial-repo/src/actionlib_tutorials/config/turtle1_moves.yaml', 'r') as file:
+    file_dir = os.path.dirname(os.path.realpath('__file__'))
+    file_name = os.path.join(file_dir, 'ros-tutorial-repo/src/actionlib_tutorials/config/turtle1_moves.yaml')
+    file_name = os.path.abspath(os.path.realpath(file_name))
+    with open(file_name, 'r') as file:
         motion = yaml.safe_load(file)
 
     # Creates a goal to send to the action server.
