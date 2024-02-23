@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ros-source-test: #Service name, useful when there are multiple services
+    image: ros-source-test
+    container_name: ros-tutorials
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+    user: ${UGID}
+    volumes:
+      - $HOME:/home/user/host_home:ro
+      #Grants read only access to the full host directory
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      #- host_path/file:/container_path/file
+      #This is how one would host a device in the container. 
+      #Whereas 'docker run' has a separate device flag, docker-compose.yml uses volumes
+      #To make read only, add :ro to the end
+      #- /dev:/dev:ro
+      #This would link the whole dev directory, read only
+    stdin_open: true
+    tty: true
+    restart: "no"
