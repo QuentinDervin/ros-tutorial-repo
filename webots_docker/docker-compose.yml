@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  webots_service:
+    image: webots_image
+    container_name: webots_image_box
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+    devices:
+      - /dev/dri
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+    stdin_open: true
+    tty: true
+    restart: "no"
+    
+    #docker-compose exec -it webots_service bash
