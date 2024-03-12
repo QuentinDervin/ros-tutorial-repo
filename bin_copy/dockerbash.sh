@@ -1,11 +1,13 @@
 docker_up(){
   cd ~/ros-tutorial-repo/docker 
-  docker-compose up &
+  docker-compose up -d
   sleep 5
-  gnome-terminal -- docker-compose exec -it quentindervin/ros-turtlebot:$1 bash
+  gnome-terminal -- docker-compose exec -it ros-source-test bash
 }
 
-alias docker_exec="docker-compose exec -it quentindervin/ros-turtlebot:$1 bash"
+
+alias docker_exec="docker-compose exec -it ros-source-test bash"
+
 
 alias docker_down="docker-compose down"
 

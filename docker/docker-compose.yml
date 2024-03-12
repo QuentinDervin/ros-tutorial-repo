@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   ros-source-test: #Service name, useful when there are multiple services
-    image: ros-source-test
+    image: quentindervin/ros-turtlebot:v1.0
     container_name: ros-tutorials
     network_mode: host
     environment:
