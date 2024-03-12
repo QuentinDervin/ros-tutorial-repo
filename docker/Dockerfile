@@ -9,6 +9,7 @@ RUN git clone https://github.com/QuentinDervin/ros-tutorial-repo.git
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN echo "source /ros-tutorial-repo/bin_copy/turtlebash.sh" >> ~/.bashrc
 RUN echo "source /ros-tutorial-repo/bin_copy/dockerbash.sh" >> ~/.bashrc
+
 RUN echo "source /ros-tutorial-repo/devel/setup.bash" >> ~/.bashrc
 
 RUN /bin/bash -c 'source /opt/ros/noetic/setup.bash; cd ros-tutorial-repo/; catkin_make'
@@ -20,3 +21,4 @@ RUN /bin/bash -c 'source /opt/ros/noetic/setup.bash; cd ros-tutorial-repo/; catk
 #COPY entrypoint.sh /entrypoint.sh
 #RUN chmod +x /entrypoint.sh
 #ENTRYPOINT [ "/entrypoint.sh" ]
+
