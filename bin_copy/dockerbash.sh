@@ -5,7 +5,9 @@ docker_up(){
   gnome-terminal -- docker-compose exec -it ros-source-test bash
 }
 
+
 alias docker_exec="docker-compose exec -it ros-source-test bash"
+
 
 alias docker_down="docker-compose down"
 
