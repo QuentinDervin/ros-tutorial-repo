@@ -24,7 +24,7 @@ def turtle1_client(motion_call):
     #reads the yaml file and gets the motions dictionary
     file_dir = os.path.dirname(os.path.realpath('__file__'))
     file_name = os.path.join(file_dir, 'ros-tutorial-repo/src/actionlib_tutorials/config/turtle1_moves.yaml')
-    file_name = os.path.abspath(os.path.realpath(file_name))
+    file_name = os.path.abspath(file_name)
     with open(file_name, 'r') as file:
         motion = yaml.safe_load(file)
 
